@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="oas.js"></script>
+        <link rel="stylesheet" href="oas.css">
+    </head>
+    <body>
+        <h1>Oas.js examples</h1>
+        <i>
+            Correct answer row of Russian listening comprehension test, long syllabus, spring 2008. <a href="https://yle.fi/aihe/artikkeli/2015/12/15/2008-kevat-venaja-pitka-oppimaara">Source</a>
+        </i>
+        <div>
+            <h2>
+                Modifiable
+            </h2>
+            <pre>new Oas('.example1');</pre>
+            <div class="example1">CCCBAABCACCABBACABBBACABB</div>
+        </div>
+        <div>
+            <h2>
+                Read-only 
+            </h2>
+            <pre>new Oas('.example2', {readOnly: true});</pre>
+            <div class="example2">CCCBAABCACCABBACABBBACABB</div>
+        </div>
+        <div>
+            <h2>
+                Changing the state of read-only
+            </h2>
+            <input type="checkbox" checked id="state"> <label for="state">Edit</label>
+<pre>
+let example3 = new Oas('.example3');
+document.querySelector('#state').onclick = (evt) => {
+    example3.readOnly = !evt.target.checked;
+}
+</pre>
+            <div class="example3">CCCBAABCACCABBACABBBACABB</div>
+        </div>
+
+    </body>
+    <script>
+        new Oas('.example1');
+        new Oas('.example2', {readOnly: true});
+        let example3 = new Oas('.example3');
+        document.querySelector('#state').onclick = (evt) => {
+            example3.readOnly = !evt.target.checked;
+        }
+        /*
+        let oas = new Oas('.example1', {
+            readOnly: true
+        });*/
+    </script>
+</html>
