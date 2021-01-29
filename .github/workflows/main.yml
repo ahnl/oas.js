@@ -27,4 +27,4 @@ jobs:
         id: brotli
         uses: charlesworth/compress-action@master
         with:
-          target-directory: 'build'
+          target-directory: '/'
