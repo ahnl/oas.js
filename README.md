@@ -4,7 +4,7 @@
 </center>
 A client-side JavaScript library for Optical Answer Sheet rendering in YTL style. Rows and columns are resized dynamically based on the input data. Oas.js has both interactive and read-only optical answer sheets.
 
-<a href="https://ahnl.github.io/oas.js/">Hosted demo.</a> | <a href="https://discord.gg/epNrVdDWRz">Need help? Join our Discord.</a>
+<a href="https://ahnl.github.io/oas.js/example.html">Hosted demo.</a> | <a href="https://discord.gg/epNrVdDWRz">Need help? Join our Discord.</a>
 
 ## Getting started
 Include oas.js in your project by using CDN or downloading locally.
