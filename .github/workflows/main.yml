@@ -20,11 +20,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
+    # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
+    - uses: actions/checkout@v2
 
-      - name: Brotli compress the html, css and js files in the "build" directory
-        id: brotli
-        uses: charlesworth/compress-action@master
-        with:
-          target-directory: '/'
+    - name: Auto Minify
+      uses: nizarmah/auto-minify@master
+
+    # Auto commits minified files to the repository
+    # Ignore it if you don't want to commit the files to the repository 
+    - name: Auto committing minified files
+      uses: stefanzweifel/git-auto-commit-action@v3.0.0
+      with:
+        commit_message: "Github Action: Auto Minified JS and CSS files"
+        branch: ${{ github.ref }}
