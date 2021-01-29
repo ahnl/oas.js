@@ -54,4 +54,4 @@ oas.elements[0].dataset.answers = 'ABCDCBA';
 oas.render();
 ```
 
-See `docs/index.html` for some more examples.
+See `example.html` for some more examples.
