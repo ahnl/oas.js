@@ -25,6 +25,6 @@ jobs:
 
       - name: Brotli compress the html, css and js files in the "build" directory
         id: brotli
-        uses: charlesworth/compress-action@1.0
+        uses: charlesworth/compress-action@master
         with:
           target-directory: 'build'
